@@ -1,0 +1,81 @@
+@border-width: 5px;
+@border-rad: 50%;
+
+.main {
+  .main_content {
+    .aboutme {
+      .main {
+        align-items: center;
+
+        .aboutme_img {
+          position: relative;
+          display: flex;
+          width: 200px;
+          height: 200px;
+          border-radius: @border-rad;
+          box-shadow: 0 0 35px @black-color;
+
+          &::after {
+            z-index: -1;
+            position: absolute;
+            content: "";
+            top: calc(-1 * @border-width);
+            left: calc(-1 * @border-width);
+            width: calc(100% + @border-width * 2);
+            height: calc(100% + @border-width * 2);
+            background: linear-gradient(
+              60deg,
+              hsl(224, 85%, 66%),
+              hsl(269, 85%, 66%),
+              hsl(314, 85%, 66%),
+              hsl(359, 85%, 66%),
+              hsl(44, 85%, 66%),
+              hsl(89, 85%, 66%),
+              hsl(134, 85%, 66%),
+              hsl(179, 85%, 66%)
+            );
+            background-size: 300% 300%;
+            background-position: 0 50%;
+            border-radius: calc(2 * @border-rad);
+            animation: moveGradient 4s alternate infinite;
+          }
+
+          img {
+            border-radius: @border-rad;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .aboutme_texts {
+          width: 70%;
+
+          .title {
+            margin-top:30px;
+            margin-bottom: 5px;
+          }
+          .sub_title {
+            font-weight: 100;
+            font-size: 1rem;
+            color: darken(@white-color, 40%);
+          }
+  
+          .intro_title {
+            margin-bottom: 15px;
+          }
+  
+          .intro_text {
+            margin: 0;
+          }
+  
+          * {
+            text-align: center;
+          }
+
+        }
+        
+      }
+    }
+  }
+}

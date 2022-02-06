@@ -1,0 +1,30 @@
+/**
+ * @font-face LESS Mixin
+ * use: .font-face(
+ *   @font-family, // name
+ *   @file-path,   // absolute/relative URL to font files
+ * )
+ */
+ .font-face(@font-family, @file-path) {
+    @font-face {
+      font-family: @font-family;
+      src: url('@{file-path}/@{font-family}.eot');
+      src: url('@{file-path}/@{font-family}.woff') format('woff');
+      src: url('@{file-path}/@{font-family}.woff2') format('woff2');
+    }
+  }
+  
+  /**
+   * font LESS Mixin
+   * use: .font(
+   *   @font-family, // font name
+   *   @font-weight, // font weight 
+   *   @letter-spacing, // letter spacing 
+   * )
+   */
+
+  .font(@font-family, @font-weight, @letter-spacing){
+    font-family: @font-family;
+    font-weight: @font-weight;
+    letter-spacing: @letter-spacing;
+  }

@@ -1,0 +1,61 @@
+@import "./aboutme.less";
+@import "./workexperience.less";
+@import "./education.less";
+@import "./qualities.less";
+@import "./reference.less";
+@import "./contact.less";
+
+.main {
+  .main_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: calc(100vw - 350px);
+    overflow-y: scroll;
+
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 99.3vh;
+      position: relative;
+
+      .vector-top,
+      .vector-bottom {
+        position: absolute;
+        z-index: 0;
+        width: 20%;
+      }
+    
+
+      .vector-top {
+        left: 4%;
+        top: 6%;
+      }
+
+      .vector-bottom {
+        right: 2%;
+        bottom: 5%;
+        transform: rotate(180deg);
+      }
+
+      * {
+        z-index: 1;
+      }
+
+
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 80vh;
+        overflow-y: auto;
+      }
+
+    }
+  }
+}

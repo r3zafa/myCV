@@ -1,0 +1,25 @@
+ //text
+.font-face(playfair-display-regular, '../public/fonts/playfair-display-regular');
+
+// headline
+.font-face(ubuntu-regular, '../public/fonts/ubuntu-regular');
+
+// paragraph
+@p-font-size: clamp(0.7rem,2.7vw,1.2rem);
+
+
+    p {
+        .font(playfair-display-regular, 400, 0); 
+        font-size: @p-font-size;
+    }
+    * {
+        .font(ubuntu-regular, 700, 0);
+    }
+
+
+
+
+
+
+
+

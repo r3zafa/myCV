@@ -1,0 +1,574 @@
+@font-face {
+  font-family: playfair-display-regular;
+  src: url('../public/fonts/playfair-display-regular/playfair-display-regular.eot');
+  src: url('../public/fonts/playfair-display-regular/playfair-display-regular.woff') format('woff');
+  src: url('../public/fonts/playfair-display-regular/playfair-display-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: ubuntu-regular;
+  src: url('../public/fonts/ubuntu-regular/ubuntu-regular.eot');
+  src: url('../public/fonts/ubuntu-regular/ubuntu-regular.woff') format('woff');
+  src: url('../public/fonts/ubuntu-regular/ubuntu-regular.woff2') format('woff2');
+}
+p {
+  font-family: playfair-display-regular;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: clamp(0.7rem, 2.7vw, 1.2rem);
+}
+* {
+  font-family: ubuntu-regular;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.main .main_nav {
+  width: 350px;
+  background-color: #2b2d42;
+  -webkit-box-shadow: 2px 0 20px #2b2d42;
+          box-shadow: 2px 0 20px #2b2d42;
+}
+.main .main_nav div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  position: fixed;
+  width: 347px;
+}
+.main .main_nav div a {
+  text-decoration: none;
+  padding: 20px 30px;
+  color: #EDF2F4;
+}
+.main .main_nav div a:nth-child(1) {
+  margin-top: 100px;
+}
+.main .main_nav div a:hover {
+  background-color: #EF233C;
+}
+.main .main_nav img {
+  width: 70%;
+}
+.btn-primary {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 25px;
+  background-color: #8D99AE;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 0;
+  position: relative;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 15px;
+}
+.btn-primary:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.btn-primary:hover:before {
+  opacity: 1;
+}
+.btn-primary:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #8D99AE;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.main .main_content .aboutme .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main_content .aboutme .main .aboutme_img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 35px #2b2d42;
+          box-shadow: 0 0 35px #2b2d42;
+}
+.main .main_content .aboutme .main .aboutme_img::after {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  top: calc(-1 * 5px);
+  left: calc(-1 * 5px);
+  width: calc(100% + 5px * 2);
+  height: calc(100% + 5px * 2);
+  background: linear-gradient(60deg, hsl(224, 85%, 66%), hsl(269, 85%, 66%), hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%), hsl(89, 85%, 66%), hsl(134, 85%, 66%), hsl(179, 85%, 66%));
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * 50%);
+  -webkit-animation: moveGradient 4s alternate infinite;
+          animation: moveGradient 4s alternate infinite;
+}
+.main .main_content .aboutme .main .aboutme_img img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .main_content .aboutme .main .aboutme_texts {
+  width: 70%;
+}
+.main .main_content .aboutme .main .aboutme_texts .title {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.main .main_content .aboutme .main .aboutme_texts .sub_title {
+  font-weight: 100;
+  font-size: 1rem;
+  color: #999999;
+}
+.main .main_content .aboutme .main .aboutme_texts .intro_title {
+  margin-bottom: 15px;
+}
+.main .main_content .aboutme .main .aboutme_texts .intro_text {
+  margin: 0;
+}
+.main .main_content .aboutme .main .aboutme_texts * {
+  text-align: center;
+}
+.main .main_content .workexperience .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main_content .workexperience .main .cards {
+  overflow: auto;
+  width: 70%;
+  margin-top: 20px;
+}
+.main .main_content .workexperience .main .cards .separator_line {
+  height: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.main .main_content .workexperience .main .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.main .main_content .workexperience .main .cards .card .card_title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main .main_content .workexperience .main .cards .card .card_title .card_address,
+.main .main_content .workexperience .main .cards .card .card_title .card_date {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.main .main_content .workexperience .main .cards .card .card_title .card_address .dote,
+.main .main_content .workexperience .main .cards .card .card_title .card_date .dote {
+  width: 10px;
+  height: 10px;
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+.main .main_content .workexperience .main .cards .card .card_text {
+  margin: 0;
+  margin-left: 10px;
+}
+.main .main_content .workexperience .main .cards .card .card_text span {
+  color: #D80032;
+  font-weight: 400;
+}
+.main .main_content .education .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main_content .education .main .cards {
+  overflow: auto;
+  width: 70%;
+  margin-top: 20px;
+}
+.main .main_content .education .main .cards .separator_line {
+  height: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.main .main_content .education .main .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.main .main_content .education .main .cards .card .card_title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main .main_content .education .main .cards .card .card_title .card_address,
+.main .main_content .education .main .cards .card .card_title .card_date {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.main .main_content .education .main .cards .card .card_title .card_address .dote,
+.main .main_content .education .main .cards .card .card_title .card_date .dote {
+  width: 10px;
+  height: 10px;
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+.main .main_content .education .main .cards .card .card_text {
+  margin: 0;
+  margin-left: 10px;
+  font-style: italic;
+}
+.main .main_content .qualities .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main_content .qualities .main .cards {
+  overflow: auto;
+  width: 70%;
+  margin-top: 20px;
+}
+.main .main_content .qualities .main .cards .separator_line {
+  height: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.main .main_content .qualities .main .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.main .main_content .qualities .main .cards .card .card_title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main .main_content .qualities .main .cards .card .card_title .card_address,
+.main .main_content .qualities .main .cards .card .card_title .card_date {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.main .main_content .qualities .main .cards .card .card_title .card_address .dote,
+.main .main_content .qualities .main .cards .card .card_title .card_date .dote {
+  width: 10px;
+  height: 10px;
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+.main .main_content .qualities .main .cards .card .card_text {
+  margin: 0;
+  margin-left: 10px;
+}
+.main .main_content .qualities .main .cards .card .card_text span {
+  color: #D80032;
+  font-weight: 400;
+}
+.main .main_content .reference .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main_content .reference .main .cards {
+  overflow: auto;
+  width: 70%;
+  margin-top: 20px;
+  height: 45%;
+}
+.main .main_content .reference .main .cards .separator_line {
+  height: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.main .main_content .reference .main .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main .main_content .reference .main .cards .card .card_title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main .main_content .reference .main .cards .card .card_title .card_address,
+.main .main_content .reference .main .cards .card .card_title .card_date {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.main .main_content .reference .main .cards .card .card_title .card_address .dote,
+.main .main_content .reference .main .cards .card .card_title .card_date .dote {
+  width: 10px;
+  height: 10px;
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+.main .main_content .reference .main .cards .card .card_text {
+  margin: 0;
+  margin-left: 10px;
+  font-style: italic;
+}
+.main .main_content .contact .main {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .main_content .contact .main .cards {
+  overflow: auto;
+  width: 70%;
+  margin-top: 20px;
+  height: 45%;
+}
+.main .main_content .contact .main .cards .separator_line {
+  height: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.main .main_content .contact .main .cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main .main_content .contact .main .cards .card .card_title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.main .main_content .contact .main .cards .card .card_title .card_address,
+.main .main_content .contact .main .cards .card .card_title .card_date {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.main .main_content .contact .main .cards .card .card_title .card_address .dote,
+.main .main_content .contact .main .cards .card .card_title .card_date .dote {
+  width: 10px;
+  height: 10px;
+  margin-right: 0.3rem;
+  margin-left: 0.5rem;
+}
+.main .main_content .contact .main .cards .card .card_text {
+  margin: 0;
+  margin-left: 10px;
+  font-style: italic;
+}
+.main .main_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: calc(100vw - 350px);
+  overflow-y: scroll;
+}
+.main .main_content section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 99.3vh;
+  position: relative;
+}
+.main .main_content section .vector-top,
+.main .main_content section .vector-bottom {
+  position: absolute;
+  z-index: 0;
+  width: 20%;
+}
+.main .main_content section .vector-top {
+  left: 4%;
+  top: 6%;
+}
+.main .main_content section .vector-bottom {
+  right: 2%;
+  bottom: 5%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.main .main_content section * {
+  z-index: 1;
+}
+.main .main_content section .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 80vh;
+  overflow-y: auto;
+}
+/**
+ * @font-face LESS Mixin
+ * use: .font-face(
+ *   @font-family, // name
+ *   @file-path,   // absolute/relative URL to font files
+ * )
+ */
+/**
+   * font LESS Mixin
+   * use: .font(
+   *   @font-family, // font name
+   *   @font-weight, // font weight 
+   *   @letter-spacing, // letter spacing 
+   * )
+   */
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@-webkit-keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+* {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #EDF2F4;
+  color: #2b2d42;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=index.css.map */

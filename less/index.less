@@ -1,0 +1,35 @@
+// settings
+@import "./_settings/index.less";
+
+//components
+@import "./components/index.less";
+
+
+// mixins
+@import "./mixins/fontface-mixin.less";
+
+
+//animations
+@import "./animations/keyframes.less";
+
+
+
+* {
+    scroll-behavior:smooth;
+}
+
+
+body {
+    background-color: @lightgray-color;
+    color: @black-color;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
