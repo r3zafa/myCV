@@ -4,24 +4,41 @@
     background-color: @black-color;
     box-shadow: 2px 0 20px @black-color;
 
+    .nav_body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      position: fixed;
+      width: 347px;
 
-    div {
+      .nav_logo {
+        text-align:  center;
+        h1 {
+          margin-top: 60px;
+          margin-bottom: 25px;
+          color: @white-color;
+          text-align: center;
+          font-weight: 100;
+          font-size: 2.5rem;
+        }
+        img {
+          width: 95%;
+          height: 2rem;
+        }
+      }
+
+      .nav_links {
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
-        height: 100vh;
-        position: fixed;
-        width: 347px;
+        a {
+          text-decoration: none;
+          padding: 20px 30px;
+          color: @lightgray-color;
 
-      a {
-        &:nth-child(1) {
-          margin-top: 100px;
-        }
-        text-decoration: none;
-        padding: 20px 30px;
-        color: @lightgray-color;
-
-        &:hover {
-          background-color: @lightred-color;
+          &:hover {
+            background-color: @lightred-color;
+          }
         }
       }
     }

@@ -5,14 +5,10 @@
         align-items: center;
         .cards {
           overflow: auto;
-          width: 70%;
           margin-top: 20px;
 
           .separator_line {
-            height: 18px;
             width: 100%;
-            margin-bottom: 10px;
-            margin-top: 15px;
           }
 
           .card {
@@ -26,27 +22,208 @@
               margin-top: 0;
               margin-bottom: 5px;
 
-              .card_address,
-              .card_date {
-                font-size: 0.9rem;
-                font-weight: 100;
-
-                .dote {
-                  width: 10px;
-                  height: 10px;
-                  margin-right: 0.3rem;
-                  margin-left: 0.5rem;
-                }
-              }
             }
 
-            .card_text {
-              margin: 0;
-              margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
 
-              span {
-                color: @red-color;
-                font-weight: 400;
+@media only screen and (min-width: 1700px) {
+  .qualities {
+    .main {
+      .cards {
+        width: 80%;
+        margin-top: 15px;
+
+        .separator_line {
+          height: 22px;
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+
+        .card {
+          p {
+            margin: 0;
+            font-style: italic;
+          }
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 14px;
+                height: 14px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1700px) {
+  .qualities {
+    .main {
+      .cards {
+        width: 78%;
+        margin-top: 10px;
+
+        .separator_line {
+          height: 20px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+
+        .card {
+          p {
+            margin: 0;
+            font-style: italic;
+          }
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 12px;
+                height: 12px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .qualities {
+    .main {
+      .cards {
+        width: 76%;
+        margin-top: 10px;
+
+        .separator_line {
+          height: 18px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+
+        .card {
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 12px;
+                height: 12px;
+                margin-right: 0.3rem;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .qualities {
+    .main {
+      .cards {
+        width: 74%;
+        margin-top: 10px;
+
+        .separator_line {
+          height: 15px;
+          margin-top: 12px;
+          margin-bottom: 7px;
+        }
+
+        .card {
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 10px;
+                height: 10px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .qualities {
+    .main {
+      .cards {
+        width: 72%;
+        margin-top: 10px;
+
+        .separator_line {
+          display: none;
+        }
+
+        .card {
+          &:not(&:nth-child(1)) {
+            margin-top: 15px;
+          }
+
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 9px;
+                height: 9px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .qualities {
+    .main {
+      .cards {
+        width: 70%;
+        margin-top: 10px;
+
+        .separator_line {
+          display: none;
+        }
+
+        .card {
+          &:not(&:nth-child(1)) {
+            margin-top: 12px;
+          }
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 7px;
+                height: 7px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
               }
             }
           }

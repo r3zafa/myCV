@@ -1,22 +1,90 @@
- //text
-.font-face(playfair-display-regular, '../public/fonts/playfair-display-regular');
+//text
+.font-face(playfair-display-regular, "../public/fonts/playfair-display-regular");
 
 // headline
-.font-face(ubuntu-regular, '../public/fonts/ubuntu-regular');
+.font-face(ubuntu-regular, "../public/fonts/ubuntu-regular");
 
 // paragraph
-@p-font-size: clamp(0.6rem,2vw,1rem);
+
+p {
+  .font(playfair-display-regular, 400, 0);
+}
+span {
+  .font(ubuntu-regular, 100, 0);
+}
+* {
+  .font(ubuntu-regular, 700, 0);
+}
+
+@body_font_size_xlg: clamp(1.25rem, 3vw, 1.4rem);
+@span_font_size_xlg: 1rem;
+@body_font_size_lg: clamp(1.15rem, 3vw, 1.35rem);
+@span_font_size_lg: 0.95rem;
+@body_font_size_md: clamp(1.1rem, 3vw, 1.3rem);
+@span_font_size_md: 0.85rem;
+@body_font_size_sm: clamp(1rem, 3vw, 1.2rem);
+@span_font_size_sm: 0.75rem;
+@body_font_size_xs: clamp(0.9rem, 3vw, 1.1rem);
+@span_font_size_xs: 0.75rem;
 
 
-    p {
-        .font(playfair-display-regular, 400, 0); 
-    }
-    * {
-        .font(ubuntu-regular, 700, 0);
-    }
-
-
+@media only screen and (min-width: 1700px) {
     body {
-        font-size: @p-font-size;
-    }
+        font-size: @body_font_size_xlg;
+      }
+    
+      span {
+        font-size: @span_font_size_xlg;
+      }
+}
 
+@media only screen and (max-width: 1700px) {
+    body {
+        font-size: @body_font_size_lg;
+      }
+    
+      span {
+        font-size: @span_font_size_lg;
+      }
+}
+
+
+@media only screen and (max-width: 1100px) {
+    body {
+        font-size: @body_font_size_md;
+      }
+    
+      span {
+        font-size: @span_font_size_md;
+      }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: @body_font_size_md;
+  }
+
+  span {
+    font-size: @span_font_size_md;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: @body_font_size_sm;
+  }
+
+  span {
+    font-size: @span_font_size_sm;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  body {
+    font-size: @body_font_size_xs;
+  }
+
+  span {
+    font-size: @span_font_size_xs;
+  }
+}

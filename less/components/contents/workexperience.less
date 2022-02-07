@@ -4,12 +4,9 @@
       .main {
         align-items: center;
         .cards {
-          overflow: auto;
-
           .separator_line {
             width: 100%;
           }
-
           .card {
             display: flex;
             flex-direction: column;
@@ -19,22 +16,11 @@
 
             .card_title {
               margin-top: 0;
-              margin-bottom: 5px;
-
-              .card_address,
-              .card_date {
-                font-weight: 100;
-              }
+              margin-bottom: 10px;
             }
 
             .card_text {
               margin: 0;
-              margin-left: 10px;
-
-              span {
-                color: @red-color;
-                font-weight: 400;
-              }
             }
           }
         }
@@ -43,65 +29,33 @@
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  .main_content {
-    .workexperience {
-      .main {
-        .cards {
-          width: 75%;
-          margin-top: 20px;
+@media only screen and (min-width: 1700px) {
+  .workexperience {
+    .main {
+      .cards {
+        width: 84%;
+        margin-top: 15px;
 
-          .separator_line {
-            height: 16px;
-            margin-bottom: 10px;
-            margin-top: 15px;
-          }
-          .card {
-            .card_title {
-              .card_address,
-              .card_date {
-                font-size: 0.85rem;
-
-                .dote {
-                  width: 10px;
-                  height: 10px;
-                  margin-right: 0.3rem;
-                  margin-left: 0.5rem;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .main_content {
-    .workexperience {
-      .main {
-        .cards {
-          width: 80%;
+        .separator_line {
+          height: 18px;
           margin-top: 10px;
+          margin-bottom: 5px;
+        }
 
-          .separator_line {
-            height: clamp(0.6rem, 1.4vw, 1.2rem);
-            margin-bottom: 5px;
-            margin-top: 10px;
+        .card {
+          p > span:nth-child(1) {
+            color: @red-color;
+            font-size: 1.4rem;
           }
-          .card {
-            .card_title {
-              .card_address,
-              .card_date {
-                font-size: 0.7rem;
 
-                .dote {
-                  width: 8px;
-                  height: 8px;
-                  margin-right: 0.2rem;
-                  margin-left: 0.4rem;
-                }
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 14px;
+                height: 14px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
               }
             }
           }
@@ -111,31 +65,77 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .main_content {
-    .workexperience {
-      .main {
-        .cards {
-          width: 80%;
+@media only screen and (max-width: 1700px) {
+  .workexperience {
+    .main {
+      .cards {
+        width: 86%;
+        margin-top: 10px;
+
+        .separator_line {
+          height: 18px;
           margin-top: 10px;
+          margin-bottom: 5px;
+        }
 
-          .separator_line {
-            height: clamp(0.6rem, 1.9vw, 1.2rem);
-            margin-bottom: 5px;
-            margin-top: 10px;
+        .card {
+          // &:not(&:nth-child(1)) {
+          //   margin-top: 10px;
+          // }
+
+          p > span:nth-child(1) {
+            color: @red-color;
+            font-size: 1.3rem;
           }
-          .card {
-            .card_title {
-              .card_address,
-              .card_date {
-                font-size: 0.7rem;
 
-                .dote {
-                  width: 8px;
-                  height: 8px;
-                  margin-right: 0.2rem;
-                  margin-left: 0.4rem;
-                }
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 12px;
+                height: 12px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .workexperience {
+    .main {
+      .cards {
+        width: 80%;
+        margin-top: 10px;
+
+        .separator_line {
+          height: 18px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+
+        .card {
+          // &:not(&:nth-child(1)) {
+          //   margin-top: 10px;
+          // }
+
+          p > span:nth-child(1) {
+            color: @red-color;
+            font-size: 1.2rem;
+          }
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 12px;
+                height: 12px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
               }
             }
           }
@@ -146,30 +146,36 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .main_content {
-    .workexperience {
-      .main {
-        .cards {
-          width: 80%;
-          margin-top: 15px;
+  .workexperience {
+    .main {
+      .cards {
+        width: 76%;
+        margin-top: 10px;
 
-          .separator_line {
-            height: clamp(0.6rem, 2.4vw, 1.3rem);
-            margin-bottom: 8px;
-            margin-top: 12px;
+        .separator_line {
+          height: 15px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+
+        .card {
+          // &:not(&:nth-child(1)) {
+          //   margin-top: 10px;
+          // }
+
+          p > span:nth-child(1) {
+            color: @red-color;
+            font-size: 1.1rem;
           }
-          .card {
-            .card_title {
-              .card_address,
-              .card_date {
-                font-size: 0.8rem;
 
-                .dote {
-                  width: 8px;
-                  height: 8px;
-                  margin-right: 0.2rem;
-                  margin-left: 0.4rem;
-                }
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 10px;
+                height: 10px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
               }
             }
           }
@@ -180,30 +186,34 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .main_content {
-    .workexperience {
-      .main {
-        .cards {
-          width: 75%;
-          margin-top: 10px;
+  .workexperience {
+    .main {
+      .cards {
+        width: 74%;
+        margin-top: 10px;
 
-          .separator_line {
-            height: clamp(0.4rem, 3vw, 1.3rem);
-            margin-bottom: 10px;
-            margin-top: 15px;
+        .separator_line {
+          display: none;
+        }
+
+        .card {
+          &:not(&:nth-child(1)) {
+            margin-top: 10px;
           }
-          .card {
-            .card_title {
-              .card_address,
-              .card_date {
-                font-size: 0.75rem;
 
-                .dote {
-                  width: 8px;
-                  height: 8px;
-                  margin-right: 0.2rem;
-                  margin-left: 0.4rem;
-                }
+          p > span:nth-child(1) {
+            color: @red-color;
+            font-size: 1rem;
+          }
+
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 9px;
+                height: 9px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
               }
             }
           }
@@ -213,34 +223,35 @@
   }
 }
 
-@media only screen and (max-width: 300px) {
-  .main_content {
-    .workexperience {
-      .main {
-        .cards {
-          width: 80%;
-          margin-top: 10px;
+@media only screen and (max-width: 350px) {
+  .workexperience {
+    .main {
+      .cards {
+        width: 72%;
+        margin-top: 10px;
 
-          .separator_line {
-            display: none;
+        .separator_line {
+          display: none;
+        }
+
+        .card {
+          &:not(&:nth-child(1)) {
+            margin-top: 10px;
           }
 
-          .card {
-            &:not(&:nth-child(1)) {
-              margin-top: 20px;
-            }
+          p > span:nth-child(1) {
+            color: @red-color;
+            font-size: 0.9rem;
+          }
 
-            .card_title {
-              .card_address,
-              .card_date {
-                font-size: 0.65rem;
-
-                .dote {
-                  width: 8px;
-                  height: 8px;
-                  margin-right: 0.2rem;
-                  margin-left: 0.4rem;
-                }
+          .card_title {
+            .card_address,
+            .card_date {
+              .dote {
+                width: 7px;
+                height: 7px;
+                margin-right: 0.2rem;
+                margin-left: 0.2rem;
               }
             }
           }
