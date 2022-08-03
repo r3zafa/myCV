@@ -1,1 +1,14 @@
-{}
+{
+    "name": "personal cv",
+    "authors": [
+        {
+            "name": "Reza Faraji",
+            "email": "r3zafaraji@gmail.de",
+            "homepage": "https://www.lebenslauf.herokuapp.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.4",
+    }
+}
