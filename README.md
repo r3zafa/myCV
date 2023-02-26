@@ -3,7 +3,7 @@
 > my personal CV
 
 see live : https://r3zafa.github.io/myCV/
-pass:
+pass: accessMyCV
 
 # Installing less
 ## Documentation link
