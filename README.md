@@ -2,6 +2,9 @@
 # myCV
 > my personal CV
 
+see live : https://r3zafa.github.io/myCV/
+pass:
+
 # Installing less
 ## Documentation link
 > https://lesscss.org
