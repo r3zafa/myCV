@@ -2,7 +2,7 @@
 # myCV
 > my personal CV
 
-see live : 
+# live here: 
 ## https://r3zafa.github.io/myCV/
 pass: accessMyCV
 
